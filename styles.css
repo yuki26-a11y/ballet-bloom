@@ -82,7 +82,7 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
   background: linear-gradient(140deg, var(--pink-400), var(--purple-400));
   box-shadow: 0 8px 18px rgba(156, 132, 148, .3);
 }
-.brand-mark svg { width: 30px; height: 30px; stroke: none; }
+.brand-mark svg { width: 30px; height: 30px; stroke: none; fill: currentColor; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.35; }
 .brand-text strong { font-size: 17px; letter-spacing: .3px; font-family: "Songti SC", "Noto Serif CJK SC", serif; }
 .brand-text small { font-size: 11px; color: var(--ink-faint); letter-spacing: .5px; }
@@ -189,6 +189,7 @@ main { outline: none; }
 .hero-copy { position: relative; z-index: 1; }
 .hero-kicker { display: inline-block; padding: 5px 13px; border-radius: 20px; background: rgba(255,255,255,.65); font-size: 11px; letter-spacing: 2px; text-transform: lowercase; margin-bottom: 12px; }
 .hero h2 { margin: 0 0 8px; font-size: 25px; font-family: "Songti SC", "Noto Serif CJK SC", serif; font-weight: 600; }
+.hero-quote { font-family: Georgia, "Times New Roman", "Songti SC", serif !important; font-size: 21px !important; line-height: 1.55; letter-spacing: .2px; font-weight: 500; color: #6f5560; max-width: 30ch; }
 .hero p { margin: 0; font-size: 13px; line-height: 1.8; opacity: .82; }
 .hero-art { position: relative; z-index: 1; flex: none; width: 140px; height: 140px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.42); }
 .hero-art svg { width: 116px; height: 116px; }
@@ -442,6 +443,7 @@ main { outline: none; }
   .topbar-actions .btn { flex: 1; }
   .two-col, .equal-col, .form-grid { grid-template-columns: 1fr; }
   .hero { flex-direction: column; align-items: flex-start; padding: 24px; }
+  .hero-quote { font-size: 17px !important; max-width: 100%; }
   .hero-art { position: absolute; right: 2px; bottom: 2px; z-index: 0; width: 90px; height: 90px; opacity: .3; }
   .hero-art svg { width: 92px; height: 92px; }
   .class-row { grid-template-columns: 60px 1fr; }

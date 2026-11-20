@@ -17,38 +17,51 @@
   const EMPTY_BOARD = () => ({ leotard: null, skirt: null, tights: null, shoes: null, accessory: null, warmup: null });
   const TITLES = { home: "yuki's ballet space", photos: '照片墙', classes: '课时记录', wardrobe: '我的衣柜', stylist: '搭配台' };
 
+  // 足尖鞋（pointe shoes）：方形鞋头 platform + 交叉缎带 + 蝴蝶结
   const HERO_ART = `<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
-      <linearGradient id="bbPetal" x1="30" y1="40" x2="130" y2="130" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#D6A3AC"/><stop offset="1" stop-color="#BFA9B4"/>
-      </linearGradient>
-      <linearGradient id="bbBody" x1="55" y1="30" x2="115" y2="145" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#9C8494"/><stop offset="1" stop-color="#C28697"/>
-      </linearGradient>
-      <radialGradient id="bbGlow"><stop stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+      <linearGradient id="bbShoe" x1="40" y1="30" x2="120" y2="130" gradientUnits="userSpaceOnUse"><stop stop-color="#EECFD4"/><stop offset="1" stop-color="#C28697"/></linearGradient>
+      <linearGradient id="bbTip" x1="50" y1="110" x2="110" y2="135" gradientUnits="userSpaceOnUse"><stop stop-color="#C28697"/><stop offset="1" stop-color="#A96C80"/></linearGradient>
+      <radialGradient id="bbGlow"><stop stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
     </defs>
     <circle cx="80" cy="80" r="74" fill="url(#bbGlow)"/>
-    <path d="M80 58C68 50 62 38 66 28c3-7 10-8 14-2 4-6 11-5 14 2 4 10-2 22-14 30Z" fill="url(#bbPetal)" opacity=".5"/>
-    <circle cx="80" cy="50" r="9" fill="url(#bbBody)"/>
-    <circle cx="80" cy="38" r="4.5" fill="url(#bbBody)"/>
-    <path d="M80 59c-2 11-5 19-7 27" stroke="url(#bbBody)" stroke-width="4" stroke-linecap="round"/>
-    <g fill="url(#bbPetal)" opacity=".78">
-      <path d="M73 84c-15-4-29 2-39 14 15 3 28 1 39-6Z"/>
-      <path d="M73 84c-12-10-25-12-39-8 10 11 23 17 37 16Z"/>
-      <path d="M75 84c13-10 26-12 41-8-10 12-24 18-39 16Z"/>
-      <path d="M75 84c16-4 30 2 41 14-15 3-29 1-40-6Z"/>
-      <path d="M74 86c-8 10-12 22-10 34 11-8 16-20 12-30Z"/>
-      <path d="M75 86c11 10 16 22 13 34-10-8-16-20-12-30Z"/>
+    <!-- 蝴蝶结与飘带 -->
+    <path d="M80 46 C66 33 51 35 53 45 C55 55 69 54 80 46 Z" fill="url(#bbShoe)"/>
+    <path d="M80 46 C94 33 109 35 107 45 C105 55 91 54 80 46 Z" fill="url(#bbShoe)"/>
+    <path d="M76 50 C71 61 67 70 62 80" stroke="#C28697" stroke-width="4" stroke-linecap="round"/>
+    <path d="M84 50 C89 61 93 70 98 80" stroke="#C28697" stroke-width="4" stroke-linecap="round"/>
+    <path d="M80 46 C64 32 51 37 42 26" stroke="#C28697" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+    <path d="M80 46 C96 32 109 37 118 26" stroke="#C28697" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+    <circle cx="80" cy="46" r="5" fill="#B47186"/>
+    <!-- 左鞋 -->
+    <g transform="translate(53 100) rotate(-13)">
+      <path d="M-10 -30 C-13 -20 -14 -6 -12 6 C-11 14 -9 18 -8 22 L-8 28 Q0 31 8 28 L8 22 C9 18 11 14 12 6 C14 -6 13 -20 10 -30 Q0 -26 -10 -30 Z" fill="url(#bbShoe)" stroke="#B47186" stroke-width="1.1"/>
+      <path d="M-8 20 Q0 23 8 20 L8 28 Q0 31 -8 28 Z" fill="url(#bbTip)"/>
+      <path d="M-8 20 Q0 23 8 20" stroke="#B47186" stroke-width="1" opacity=".5"/>
+      <path d="M-10 -30 Q0 -25 10 -30" stroke="#fff" stroke-width="2.2" opacity=".7"/>
+      <path d="M-8 -18 Q-3 -14 0 -16" stroke="#fff" stroke-width="1.2" opacity=".4"/>
+      <path d="M-12 -12 Q0 -4 12 -10" stroke="#C28697" stroke-width="3.6" stroke-linecap="round"/>
+      <path d="M12 -12 Q0 -4 -12 -10" stroke="#C28697" stroke-width="3.6" stroke-linecap="round"/>
+      <path d="M-9 -28 C-16 -32 -18 -38 -15 -44" stroke="#C28697" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M9 -28 C16 -32 18 -38 15 -44" stroke="#C28697" stroke-width="3.2" stroke-linecap="round"/>
     </g>
-    <path d="M65 86q10-5 20 0" stroke="#9C8494" stroke-width="3" stroke-linecap="round"/>
-    <path d="M75 88c-3 13-4 27-3 40v14" stroke="url(#bbBody)" stroke-width="4" stroke-linecap="round"/>
-    <path d="M76 90c12 8 25 15 40 18" stroke="url(#bbBody)" stroke-width="4" stroke-linecap="round"/>
-    <path d="M68 142h9" stroke="#C28697" stroke-width="4" stroke-linecap="round"/>
-    <path d="m116 108 8-3" stroke="#C28697" stroke-width="4" stroke-linecap="round"/>
-    <path d="m28 52 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z" fill="#D6A3AC"/>
-    <path d="m126 56 1.5 4 4 1.5-4 1.5-1.5 4-1.5-4-4-1.5 4-1.5Z" fill="#BFA9B4"/>
-    <circle cx="122" cy="126" r="2.5" fill="#D6A3AC"/>
-    <circle cx="36" cy="122" r="2" fill="#BFA9B4"/>
+    <!-- 右鞋 -->
+    <g transform="translate(107 100) rotate(13)">
+      <path d="M-10 -30 C-13 -20 -14 -6 -12 6 C-11 14 -9 18 -8 22 L-8 28 Q0 31 8 28 L8 22 C9 18 11 14 12 6 C14 -6 13 -20 10 -30 Q0 -26 -10 -30 Z" fill="url(#bbShoe)" stroke="#B47186" stroke-width="1.1"/>
+      <path d="M-8 20 Q0 23 8 20 L8 28 Q0 31 -8 28 Z" fill="url(#bbTip)"/>
+      <path d="M-8 20 Q0 23 8 20" stroke="#B47186" stroke-width="1" opacity=".5"/>
+      <path d="M-10 -30 Q0 -25 10 -30" stroke="#fff" stroke-width="2.2" opacity=".7"/>
+      <path d="M-8 -18 Q-3 -14 0 -16" stroke="#fff" stroke-width="1.2" opacity=".4"/>
+      <path d="M-12 -12 Q0 -4 12 -10" stroke="#C28697" stroke-width="3.6" stroke-linecap="round"/>
+      <path d="M12 -12 Q0 -4 -12 -10" stroke="#C28697" stroke-width="3.6" stroke-linecap="round"/>
+      <path d="M-9 -28 C-16 -32 -18 -38 -15 -44" stroke="#C28697" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M9 -28 C16 -32 18 -38 15 -44" stroke="#C28697" stroke-width="3.2" stroke-linecap="round"/>
+    </g>
+    <!-- 星点 -->
+    <path d="M22 60 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6 -4 -4 -1.6 4 -1.6 Z" fill="#D6A3AC"/>
+    <path d="M138 66 l1.2 3 3 1.2 -3 1.2 -1.2 3 -1.2 -3 -3 -1.2 3 -1.2 Z" fill="#BFA9B4"/>
+    <circle cx="26" cy="122" r="2.4" fill="#D6A3AC"/>
+    <circle cx="134" cy="124" r="2" fill="#BFA9B4"/>
   </svg>`;
 
   const state = {
@@ -125,13 +138,11 @@
     const s = stats();
     const recent = state.classes.slice(0, 4);
     const photos = state.photos.slice(0, 4);
-    const greeting = new Date().getHours() < 12 ? '早安' : new Date().getHours() < 18 ? '午安' : '晚安';
     return `
       <section class="hero">
         <div class="hero-copy">
           <span class="hero-kicker">ballet bloom</span>
-          <h2>${greeting}，舞动的女孩</h2>
-          <p>这里收藏你的每一次踮脚、每一件漂亮的体服，<br />以及一点点变得更好的自己。</p>
+          <h2 class="hero-quote">Don't do it until you get it right,<br />but do it until you can't get it wrong.</h2>
         </div>
         <div class="hero-art">${HERO_ART}</div>
       </section>

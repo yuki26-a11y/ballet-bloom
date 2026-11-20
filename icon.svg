@@ -4,12 +4,42 @@
       <stop offset="0" stop-color="#c28697"/>
       <stop offset="1" stop-color="#9c8494"/>
     </linearGradient>
+    <linearGradient id="shoe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f0dde2"/>
+    </linearGradient>
   </defs>
   <rect width="192" height="192" rx="44" fill="url(#g)"/>
-  <g fill="#fff">
-    <circle cx="96" cy="52" r="13"/>
-    <path d="M96 68c-9 0-16 7-16 16 0 6 3 11 8 14l-13 12 19 5 19-5-13-12c5-3 8-8 8-14 0-9-7-16-16-16z" opacity=".95"/>
-    <path d="M80 106c-16 4-28 14-33 28h98c-5-14-17-24-33-28l-16 8-16-8z" opacity=".7"/>
+  <g transform="translate(16 16)">
+    <!-- 蝴蝶结与飘带 -->
+    <g fill="#fff">
+      <path d="M80 46 C66 33 51 35 53 45 C55 55 69 54 80 46 Z"/>
+      <path d="M80 46 C94 33 109 35 107 45 C105 55 91 54 80 46 Z"/>
+    </g>
+    <path d="M76 50 C71 61 67 70 62 80" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M84 50 C89 61 93 70 98 80" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <path d="M80 46 C64 32 51 37 42 26" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none" opacity=".55"/>
+    <path d="M80 46 C96 32 109 37 118 26" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none" opacity=".55"/>
+    <circle cx="80" cy="46" r="5" fill="#f3d9de"/>
+    <!-- 左鞋 -->
+    <g transform="translate(53 100) rotate(-13)">
+      <path d="M-10 -30 C-13 -20 -14 -6 -12 6 C-11 14 -9 18 -8 22 L-8 28 Q0 31 8 28 L8 22 C9 18 11 14 12 6 C14 -6 13 -20 10 -30 Q0 -26 -10 -30 Z" fill="url(#shoe)"/>
+      <path d="M-8 20 Q0 23 8 20 L8 28 Q0 31 -8 28 Z" fill="#e6c7cf"/>
+      <path d="M-10 -30 Q0 -25 10 -30" stroke="#c28697" stroke-width="2" fill="none" opacity=".7"/>
+      <path d="M-12 -12 Q0 -4 12 -10" stroke="#c28697" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+      <path d="M12 -12 Q0 -4 -12 -10" stroke="#c28697" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+      <path d="M-9 -28 C-16 -32 -18 -38 -15 -44" stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+      <path d="M9 -28 C16 -32 18 -38 15 -44" stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+    </g>
+    <!-- 右鞋 -->
+    <g transform="translate(107 100) rotate(13)">
+      <path d="M-10 -30 C-13 -20 -14 -6 -12 6 C-11 14 -9 18 -8 22 L-8 28 Q0 31 8 28 L8 22 C9 18 11 14 12 6 C14 -6 13 -20 10 -30 Q0 -26 -10 -30 Z" fill="url(#shoe)"/>
+      <path d="M-8 20 Q0 23 8 20 L8 28 Q0 31 -8 28 Z" fill="#e6c7cf"/>
+      <path d="M-10 -30 Q0 -25 10 -30" stroke="#c28697" stroke-width="2" fill="none" opacity=".7"/>
+      <path d="M-12 -12 Q0 -4 12 -10" stroke="#c28697" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+      <path d="M12 -12 Q0 -4 -12 -10" stroke="#c28697" stroke-width="3.6" stroke-linecap="round" fill="none"/>
+      <path d="M-9 -28 C-16 -32 -18 -38 -15 -44" stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+      <path d="M9 -28 C16 -32 18 -38 15 -44" stroke="#fff" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+    </g>
   </g>
-  <path d="M56 145h80" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".85"/>
 </svg>
