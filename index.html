@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#c28697" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ballet Bloom" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest?v=2" />
+  <title>Ballet Bloom · 我的芭蕾成长日记</title>
+  <link rel="stylesheet" href="styles.css?v=8" />
+</head>
+<body>
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none">
+            <path d="M20 5c2.4 0 4 1.9 4 4.2 0 2-1.2 3.5-2.8 4.3L26 18l-6 3-6-3 4.8-4.5C17.2 12.7 16 11.2 16 9.2 16 6.9 17.6 5 20 5Z" fill="currentColor" opacity=".9"/>
+            <path d="M14 20.5c-3.6 1.2-6 4-6.7 8h25.4c-.7-4-3.1-6.8-6.7-8L20 24l-6-3.5Z" fill="currentColor" opacity=".55"/>
+            <path d="M9 30.5h22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Ballet Bloom</strong>
+          <small>我的芭蕾成长日记</small>
+        </span>
+      </div>
+
+      <nav class="nav" aria-label="主导航">
+        <button class="nav-item active" data-page="home" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9 21v-6h6v6"/></svg>
+          <span class="nav-label-full">yuki's ballet space</span>
+          <span class="nav-label-short">yuki's</span>
+        </button>
+        <button class="nav-item" data-page="photos" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/></svg>
+          <span>照片墙</span>
+        </button>
+        <button class="nav-item" data-page="classes" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          <span>课时记录</span>
+        </button>
+        <button class="nav-item" data-page="wardrobe" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6a2.5 2.5 0 1 1 2.5-2.5c0 .9-.5 1.6-1.2 2.1"/><path d="M12 8 3 17c-.8.8-.2 2 1 2h16c1.2 0 1.8-1.2 1-2z"/></svg>
+          <span>我的衣柜</span>
+        </button>
+        <button class="nav-item" data-page="stylist" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg>
+          <span>搭配台</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v6c0 4.4 3.2 7.4 8 8 4.8-.6 8-3.6 8-8V7z"/><path d="m9 12 2 2 4-4"/></svg>
+        <p>每一次抬腿与旋转，<br />都是写给自己的信。</p>
+        <span>Keep dancing, keep glowing.</span>
+      </div>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div>
+          <p class="topbar-date" id="today-label"></p>
+          <h1 id="page-title">成长概览</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn btn-ghost" type="button" data-quick="photo">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="4"/></svg>
+            上传照片
+          </button>
+          <button class="btn btn-primary" type="button" data-quick="class">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            记一节课
+          </button>
+        </div>
+      </header>
+      <main id="view-root" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="polite"></div>
+
+  <script src="js/core.js?v=2"></script>
+  <script src="js/app.js?v=6"></script>
+</body>
+</html>

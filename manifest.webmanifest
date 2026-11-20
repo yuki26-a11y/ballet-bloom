@@ -1,0 +1,17 @@
+{
+  "name": "Ballet Bloom · 我的芭蕾成长日记",
+  "short_name": "Ballet Bloom",
+  "description": "用浅粉与浅紫记录每一次芭蕾成长",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf8f5",
+  "theme_color": "#c28697",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
